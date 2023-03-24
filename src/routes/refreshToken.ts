@@ -30,7 +30,7 @@ router.post('/', async (req, res) => {
 });
 
 // logout
-router.get('/logout_all=:all', async (req, res) => {
+router.post('/logout_all=:all', async (req, res) => {
   try {
     if (req.params.all === 'true') {
       await UserToken.deleteMany();
